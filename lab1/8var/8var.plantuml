@@ -1,0 +1,31 @@
+@startuml
+!define RECTANGLE class
+
+RECTANGLE Client {
+  + Client ID: id
+  + Name: string
+  + Email: string
+}
+
+RECTANGLE Classes {
+  + Class ID: id
+  + Coach ID: id
+  + Description: string
+  + Date: string
+}
+
+RECTANGLE Coach {
+  + Couch ID: id
+  + Name: string
+  + Specialization: string
+}
+
+RECTANGLE ClientClasses {
+  + Class ID: id
+  + Client ID: id
+}
+
+Client " " -- " " ClientClasses
+Classes " " -- " " ClientClasses
+Coach " " -- " " Classes
+@enduml
