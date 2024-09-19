@@ -1,12 +1,22 @@
 @startuml
 !define RECTANGLE class
 
+' определение сущности Client
 RECTANGLE Client {
   + Client ID: id
   + Name: string
   + Email: string
 }
 
+' определение сущности Coach
+RECTANGLE Coach {
+  + Couch ID: id
+  + Name: string
+  + Specialization: string
+}
+
+' определение сущности Classes, связь 1:N
+' у тренера может быть несколько занятий, у занятия не может быть несколько тренеров
 RECTANGLE Classes {
   + Class ID: id
   + Coach ID: id
@@ -14,12 +24,8 @@ RECTANGLE Classes {
   + Date: string
 }
 
-RECTANGLE Coach {
-  + Couch ID: id
-  + Name: string
-  + Specialization: string
-}
-
+' определение сущности ClientClasses, связь N:N
+' у клиента может быть несколько занятий, и на занятии может присутствовать несколько клиентов
 RECTANGLE ClientClasses {
   + Class ID: id
   + Client ID: id
