@@ -1,0 +1,28 @@
+@startuml
+!define RECTANGLE class
+
+'определение сущности Film'
+RECTANGLE Film {
+  + Film ID: id
+  + Name: string
+}
+
+'определение сущности Session'
+'связь 1:N, т.е. у фильма может быть несколько сеансов, но один сеанс - один фильм'
+RECTANGLE Session {
+  + Session ID: id
+  + Film ID: id
+  + Description: string
+  + Date: string
+}
+
+'определение сущности Booking'
+'связь 1:1, одно бронирование для одного сеанса'
+RECTANGLE Booking {
+  + Booking ID: id
+  + Session ID: id
+}
+
+Film " " -- " " Session
+Session " " -- " " Booking
+@enduml
