@@ -1,0 +1,38 @@
+@startuml
+!define RECTANGLE class
+
+'определение сущности Client'
+RECTANGLE Client {
+  + Client ID: id
+  + Name: string
+  + Email: string
+  + Phone: string
+}
+
+'определение сущности Medicine'
+RECTANGLE Medicine {
+  + Medicine ID: id
+  + Name: string
+  + Description: string
+  + Date: string
+}
+
+'определение сущности Order'
+'связь 1:N, у одного клента может быть несколько заказов, у одного заказа может быть один владелец'
+RECTANGLE Order {
+  + Order ID: id
+  + Client ID: id
+  + Date: string
+}
+
+'определение сущности OrderMedicine'
+'связь N:N, у одного заказа может быть несколько лекарств, одно лекарство может находится в нескольких заказах'
+RECTANGLE OrderMedicine {
+  + Medicine ID: id
+  + Order ID: id
+}
+
+Client " " -- " " Order
+Order " " -- " " OrderMedicine
+Medicine " " -- " " OrderMedicine
+@enduml
