@@ -1,3 +1,4 @@
+
 @startuml
 !define RECTANGLE class
 
@@ -5,6 +6,7 @@
 RECTANGLE Film {
   + Film ID: id
   + Name: string
+  + Description: string
 }
 
 'определение сущности Session'
@@ -12,14 +14,13 @@ RECTANGLE Film {
 RECTANGLE Session {
   + Session ID: id
   + Film ID: id
-  + Description: string
   + Date: string
 }
 
 'определение сущности Booking'
 'связь 1:1, одно бронирование для одного сеанса'
 RECTANGLE Booking {
-  + Booking ID: id
+  + Booking number: string
   + Session ID: id
 }
 
