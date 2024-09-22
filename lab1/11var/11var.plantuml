@@ -1,0 +1,35 @@
+@startuml
+!define RECTANGLE class
+
+'Создание сущности Competitions'
+RECTANGLE Competitions {
+  + Competitions ID: id
+  + Description: string
+  + Date: string
+}
+
+'Создание сущности Participants'
+RECTANGLE Participants {
+  + Participants ID: id
+  + Name: string
+  + Rank: string
+}
+
+'Создание сущности Result
+Связь 1:1, т.к. один участник заканчивает соревнование с одни результатом'
+RECTANGLE Results {
+  + Participants ID: id
+  + Result: string
+}
+
+'связь N:M, т.к. в одном соревновании могут участвовать несколько человек, 
+и один человек может принимать участие в нескольких соревнованиях'
+RECTANGLE CompetitionsParticipants {
+  + Participants ID: id
+  + Competitions ID: id
+}
+
+Participants " " -- " " Results
+Competitions " " -- " " CompetitionsParticipants
+Participants " " -- " " CompetitionsParticipants
+@enduml
