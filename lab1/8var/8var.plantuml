@@ -31,7 +31,7 @@ RECTANGLE ClientClasses {
   + Client ID: id
 }
 
-Client " " -- " " ClientClasses
-Classes " " -- " " ClientClasses
-Coach " " -- " " Classes
+Client "0..*" -- "0..*" ClientClasses
+Classes "0..*" -- "0..*" ClientClasses
+Coach "0..*" -- "1" Classes
 @enduml
