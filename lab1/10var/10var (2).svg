@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="440px" preserveAspectRatio="none" style="width:315px;height:440px;background:#FFFFFF;" version="1.1" viewBox="0 0 315 440" width="315px" zoomAndPan="magnify"><defs/><g><!--MD5=[ed6624c6556d5e7b1bd23032162d20b7]
+class Client--><g id="elem_Client"><rect codeLine="4" fill="#F1F1F1" height="113.1875" id="Client" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="7" y="7"/><ellipse cx="43.6" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M46.5688,28.6406 Q45.9906,28.9375 45.35,29.0781 Q44.7094,29.2344 44.0063,29.2344 Q41.5063,29.2344 40.1781,27.5938 Q38.8656,25.9375 38.8656,22.8125 Q38.8656,19.6875 40.1781,18.0313 Q41.5063,16.375 44.0063,16.375 Q44.7094,16.375 45.35,16.5313 Q46.0063,16.6875 46.5688,16.9844 L46.5688,19.7031 Q45.9438,19.125 45.35,18.8594 Q44.7563,18.5781 44.1313,18.5781 Q42.7875,18.5781 42.1,19.6563 Q41.4125,20.7188 41.4125,22.8125 Q41.4125,24.9063 42.1,25.9844 Q42.7875,27.0469 44.1313,27.0469 Q44.7563,27.0469 45.35,26.7813 Q45.9438,26.5 46.5688,25.9219 L46.5688,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="62.4" y="27.8467">Client</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="125" y1="39" y2="39"/><ellipse cx="18" cy="52.6484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="27" y="55.9951">Client ID: id</text><ellipse cx="18" cy="68.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="27" y="72.292">Name: string</text><ellipse cx="18" cy="85.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="27" y="88.5889">Email: string</text><ellipse cx="18" cy="101.5391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="27" y="104.8857">Phone: string</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="125" y1="112.1875" y2="112.1875"/></g><!--MD5=[31492865e519f0821bfd55459a8e41bd]
+class Medicine--><g id="elem_Medicine"><rect codeLine="12" fill="#F1F1F1" height="113.1875" id="Medicine" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="153" x="155" y="180"/><ellipse cx="196.55" cy="196" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M199.5188,201.6406 Q198.9406,201.9375 198.3,202.0781 Q197.6594,202.2344 196.9563,202.2344 Q194.4563,202.2344 193.1281,200.5938 Q191.8156,198.9375 191.8156,195.8125 Q191.8156,192.6875 193.1281,191.0313 Q194.4563,189.375 196.9563,189.375 Q197.6594,189.375 198.3,189.5313 Q198.9563,189.6875 199.5188,189.9844 L199.5188,192.7031 Q198.8938,192.125 198.3,191.8594 Q197.7063,191.5781 197.0813,191.5781 Q195.7375,191.5781 195.05,192.6563 Q194.3625,193.7188 194.3625,195.8125 Q194.3625,197.9063 195.05,198.9844 Q195.7375,200.0469 197.0813,200.0469 Q197.7063,200.0469 198.3,199.7813 Q198.8938,199.5 199.5188,198.9219 L199.5188,201.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="216.45" y="200.8467">Medicine</text><line style="stroke:#181818;stroke-width:0.5;" x1="156" x2="307" y1="212" y2="212"/><ellipse cx="166" cy="225.6484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="175" y="228.9951">Medicine ID: id</text><ellipse cx="166" cy="241.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="175" y="245.292">Name: string</text><ellipse cx="166" cy="258.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="175" y="261.5889">Description: string</text><ellipse cx="166" cy="274.5391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="175" y="277.8857">Date: string</text><line style="stroke:#181818;stroke-width:0.5;" x1="156" x2="307" y1="285.1875" y2="285.1875"/></g><!--MD5=[cf4d6237fcae255cd2e1656cf84a30e2]
+class Order--><g id="elem_Order"><rect codeLine="21" fill="#F1F1F1" height="96.8906" id="Order" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="107" x="13" y="188"/><ellipse cx="44.2" cy="204" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M47.1688,209.6406 Q46.5906,209.9375 45.95,210.0781 Q45.3094,210.2344 44.6063,210.2344 Q42.1063,210.2344 40.7781,208.5938 Q39.4656,206.9375 39.4656,203.8125 Q39.4656,200.6875 40.7781,199.0313 Q42.1063,197.375 44.6063,197.375 Q45.3094,197.375 45.95,197.5313 Q46.6063,197.6875 47.1688,197.9844 L47.1688,200.7031 Q46.5438,200.125 45.95,199.8594 Q45.3563,199.5781 44.7313,199.5781 Q43.3875,199.5781 42.7,200.6563 Q42.0125,201.7188 42.0125,203.8125 Q42.0125,205.9063 42.7,206.9844 Q43.3875,208.0469 44.7313,208.0469 Q45.3563,208.0469 45.95,207.7813 Q46.5438,207.5 47.1688,206.9219 L47.1688,209.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="61.8" y="208.8467">Order</text><line style="stroke:#181818;stroke-width:0.5;" x1="14" x2="119" y1="220" y2="220"/><ellipse cx="24" cy="233.6484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="33" y="236.9951">Order ID: id</text><ellipse cx="24" cy="249.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="33" y="253.292">Client ID: id</text><ellipse cx="24" cy="266.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="33" y="269.5889">Date: string</text><line style="stroke:#181818;stroke-width:0.5;" x1="14" x2="119" y1="276.8906" y2="276.8906"/></g><!--MD5=[838e17cc80f85d19ca360ba54d065b5d]
+class OrderMedicine--><g id="elem_OrderMedicine"><rect codeLine="29" fill="#F1F1F1" height="80.5938" id="OrderMedicine" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="133" x="82" y="353"/><ellipse cx="97" cy="369" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M99.9688,374.6406 Q99.3906,374.9375 98.75,375.0781 Q98.1094,375.2344 97.4063,375.2344 Q94.9063,375.2344 93.5781,373.5938 Q92.2656,371.9375 92.2656,368.8125 Q92.2656,365.6875 93.5781,364.0313 Q94.9063,362.375 97.4063,362.375 Q98.1094,362.375 98.75,362.5313 Q99.4063,362.6875 99.9688,362.9844 L99.9688,365.7031 Q99.3438,365.125 98.75,364.8594 Q98.1563,364.5781 97.5313,364.5781 Q96.1875,364.5781 95.5,365.6563 Q94.8125,366.7188 94.8125,368.8125 Q94.8125,370.9063 95.5,371.9844 Q96.1875,373.0469 97.5313,373.0469 Q98.1563,373.0469 98.75,372.7813 Q99.3438,372.5 99.9688,371.9219 L99.9688,374.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="111" y="373.8467">OrderMedicine</text><line style="stroke:#181818;stroke-width:0.5;" x1="83" x2="214" y1="385" y2="385"/><ellipse cx="93" cy="398.6484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="101" x="102" y="401.9951">Medicine ID: id</text><ellipse cx="93" cy="414.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="102" y="418.292">Order ID: id</text><line style="stroke:#181818;stroke-width:0.5;" x1="83" x2="214" y1="425.5938" y2="425.5938"/></g><!--MD5=[879bec428a80d843af24dc47845bf14c]
+link Client to Order--><g id="link_Client_Order"><path codeLine="34" d="M66.5,120.02 C66.5,141.86 66.5,166.7 66.5,187.72 " fill="none" id="Client-Order" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="42.0266" y="140.286">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="57.9375" y="176.8895">1</text></g><!--MD5=[d7ed73c49890b0f1bad4878b274d6e8f]
+link Order to OrderMedicine--><g id="link_Order_OrderMedicine"><path codeLine="35" d="M91.77,285.27 C103.25,306.97 116.68,332.34 127.58,352.96 " fill="none" id="Order-OrderMedicine" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="70.6203" y="304.9144">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="99.0078" y="341.8163">0..*</text></g><!--MD5=[ffc69ba3605fa52e1fb728d2110cb7f5]
+link Medicine to OrderMedicine--><g id="link_Medicine_OrderMedicine"><path codeLine="36" d="M201.77,293.02 C191.16,312.83 179.44,334.72 169.7,352.91 " fill="none" id="Medicine-OrderMedicine" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="173.4874" y="313.286">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="148.3066" y="342.0566">0..*</text></g><!--MD5=[d03057adfa50049b4d83b5c1e0e7f0b8]
+@startuml
+!define RECTANGLE class
+
+'определение сущности Client'
+RECTANGLE Client {
+  + Client ID: id
+  + Name: string
+  + Email: string
+  + Phone: string
+}
+
+'определение сущности Medicine'
+RECTANGLE Medicine {
+  + Medicine ID: id
+  + Name: string
+  + Description: string
+  + Date: string
+}
+
+'определение сущности Order'
+'связь 1:N, у одного клента может быть несколько заказов, у одного заказа может быть один владелец'
+RECTANGLE Order {
+  + Order ID: id
+  + Client ID: id
+  + Date: string
+}
+
+'определение сущности OrderMedicine'
+'связь N:N, у одного заказа может быть несколько лекарств, одно лекарство может находится в нескольких заказах'
+RECTANGLE OrderMedicine {
+  + Medicine ID: id
+  + Order ID: id
+}
+
+Client "0..*" - - "1" Order
+Order "0..*" - - "0..*" OrderMedicine
+Medicine "0..*" - - "0..*" OrderMedicine
+@enduml
+
+@startuml
+
+class Client {
+  + Client ID: id
+  + Name: string
+  + Email: string
+  + Phone: string
+}
+
+class Medicine {
+  + Medicine ID: id
+  + Name: string
+  + Description: string
+  + Date: string
+}
+
+class Order {
+  + Order ID: id
+  + Client ID: id
+  + Date: string
+}
+
+class OrderMedicine {
+  + Medicine ID: id
+  + Order ID: id
+}
+
+Client "0..*" - - "1" Order
+Order "0..*" - - "0..*" OrderMedicine
+Medicine "0..*" - - "0..*" OrderMedicine
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
