@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="424px" preserveAspectRatio="none" style="width:324px;height:424px;background:#FFFFFF;" version="1.1" viewBox="0 0 324 424" width="324px" zoomAndPan="magnify"><defs/><g><!--MD5=[ed6624c6556d5e7b1bd23032162d20b7]
+class Client--><g id="elem_Client"><rect codeLine="4" fill="#F1F1F1" height="96.8906" id="Client" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="114" x="7" y="172"/><ellipse cx="41.35" cy="188" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M44.3188,193.6406 Q43.7406,193.9375 43.1,194.0781 Q42.4594,194.2344 41.7563,194.2344 Q39.2563,194.2344 37.9281,192.5938 Q36.6156,190.9375 36.6156,187.8125 Q36.6156,184.6875 37.9281,183.0313 Q39.2563,181.375 41.7563,181.375 Q42.4594,181.375 43.1,181.5313 Q43.7563,181.6875 44.3188,181.9844 L44.3188,184.7031 Q43.6938,184.125 43.1,183.8594 Q42.5063,183.5781 41.8813,183.5781 Q40.5375,183.5781 39.85,184.6563 Q39.1625,185.7188 39.1625,187.8125 Q39.1625,189.9063 39.85,190.9844 Q40.5375,192.0469 41.8813,192.0469 Q42.5063,192.0469 43.1,191.7813 Q43.6938,191.5 44.3188,190.9219 L44.3188,193.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="59.65" y="192.8467">Client</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="120" y1="204" y2="204"/><ellipse cx="18" cy="217.6484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="27" y="220.9951">Client ID: id</text><ellipse cx="18" cy="233.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="27" y="237.292">Name: string</text><ellipse cx="18" cy="250.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="27" y="253.5889">Email: string</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="120" y1="260.8906" y2="260.8906"/></g><!--MD5=[fd8f06804651a767af6d5ee4693cdfe7]
+class Coach--><g id="elem_Coach"><rect codeLine="11" fill="#F1F1F1" height="96.8906" id="Coach" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="168" x="149" y="7"/><ellipse cx="206.75" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M209.7188,28.6406 Q209.1406,28.9375 208.5,29.0781 Q207.8594,29.2344 207.1563,29.2344 Q204.6563,29.2344 203.3281,27.5938 Q202.0156,25.9375 202.0156,22.8125 Q202.0156,19.6875 203.3281,18.0313 Q204.6563,16.375 207.1563,16.375 Q207.8594,16.375 208.5,16.5313 Q209.1563,16.6875 209.7188,16.9844 L209.7188,19.7031 Q209.0938,19.125 208.5,18.8594 Q207.9063,18.5781 207.2813,18.5781 Q205.9375,18.5781 205.25,19.6563 Q204.5625,20.7188 204.5625,22.8125 Q204.5625,24.9063 205.25,25.9844 Q205.9375,27.0469 207.2813,27.0469 Q207.9063,27.0469 208.5,26.7813 Q209.0938,26.5 209.7188,25.9219 L209.7188,28.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="227.25" y="27.8467">Coach</text><line style="stroke:#181818;stroke-width:0.5;" x1="150" x2="316" y1="39" y2="39"/><ellipse cx="160" cy="52.6484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="169" y="55.9951">Couch ID: id</text><ellipse cx="160" cy="68.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="169" y="72.292">Name: string</text><ellipse cx="160" cy="85.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="169" y="88.5889">Specialization: string</text><line style="stroke:#181818;stroke-width:0.5;" x1="150" x2="316" y1="95.8906" y2="95.8906"/></g><!--MD5=[4481f1f876aa056696029f7568a5ef18]
+class Classes--><g id="elem_Classes"><rect codeLine="19" fill="#F1F1F1" height="113.1875" id="Classes" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="153" x="156.5" y="164"/><ellipse cx="201.75" cy="180" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M204.7188,185.6406 Q204.1406,185.9375 203.5,186.0781 Q202.8594,186.2344 202.1563,186.2344 Q199.6563,186.2344 198.3281,184.5938 Q197.0156,182.9375 197.0156,179.8125 Q197.0156,176.6875 198.3281,175.0313 Q199.6563,173.375 202.1563,173.375 Q202.8594,173.375 203.5,173.5313 Q204.1563,173.6875 204.7188,173.9844 L204.7188,176.7031 Q204.0938,176.125 203.5,175.8594 Q202.9063,175.5781 202.2813,175.5781 Q200.9375,175.5781 200.25,176.6563 Q199.5625,177.7188 199.5625,179.8125 Q199.5625,181.9063 200.25,182.9844 Q200.9375,184.0469 202.2813,184.0469 Q202.9063,184.0469 203.5,183.7813 Q204.0938,183.5 204.7188,182.9219 L204.7188,185.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="222.25" y="184.8467">Classes</text><line style="stroke:#181818;stroke-width:0.5;" x1="157.5" x2="308.5" y1="196" y2="196"/><ellipse cx="167.5" cy="209.6484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="176.5" y="212.9951">Class ID: id</text><ellipse cx="167.5" cy="225.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="176.5" y="229.292">Coach ID: id</text><ellipse cx="167.5" cy="242.2422" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127" x="176.5" y="245.5889">Description: string</text><ellipse cx="167.5" cy="258.5391" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="176.5" y="261.8857">Date: string</text><line style="stroke:#181818;stroke-width:0.5;" x1="157.5" x2="308.5" y1="269.1875" y2="269.1875"/></g><!--MD5=[eec86391f79ca56b9d3bb618805f7309]
+class ClientClasses--><g id="elem_ClientClasses"><rect codeLine="28" fill="#F1F1F1" height="80.5938" id="ClientClasses" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="125" x="85.5" y="337"/><ellipse cx="100.5" cy="353" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M103.4688,358.6406 Q102.8906,358.9375 102.25,359.0781 Q101.6094,359.2344 100.9063,359.2344 Q98.4063,359.2344 97.0781,357.5938 Q95.7656,355.9375 95.7656,352.8125 Q95.7656,349.6875 97.0781,348.0313 Q98.4063,346.375 100.9063,346.375 Q101.6094,346.375 102.25,346.5313 Q102.9063,346.6875 103.4688,346.9844 L103.4688,349.7031 Q102.8438,349.125 102.25,348.8594 Q101.6563,348.5781 101.0313,348.5781 Q99.6875,348.5781 99,349.6563 Q98.3125,350.7188 98.3125,352.8125 Q98.3125,354.9063 99,355.9844 Q99.6875,357.0469 101.0313,357.0469 Q101.6563,357.0469 102.25,356.7813 Q102.8438,356.5 103.4688,355.9219 L103.4688,358.6406 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="93" x="114.5" y="357.8467">ClientClasses</text><line style="stroke:#181818;stroke-width:0.5;" x1="86.5" x2="209.5" y1="369" y2="369"/><ellipse cx="96.5" cy="382.6484" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="105.5" y="385.9951">Class ID: id</text><ellipse cx="96.5" cy="398.9453" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="105.5" y="402.292">Client ID: id</text><line style="stroke:#181818;stroke-width:0.5;" x1="86.5" x2="209.5" y1="409.5938" y2="409.5938"/></g><!--MD5=[1f054bbb951923a393bc66ff619aee87]
+link Client to ClientClasses--><g id="link_Client_ClientClasses"><path codeLine="33" d="M89.89,269.27 C101.65,290.97 115.4,316.34 126.57,336.96 " fill="none" id="Client-ClientClasses" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="68.8237" y="288.9144">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="97.9102" y="325.8163">0..*</text></g><!--MD5=[028a883da4b00de29bf4bbbfaccdf59c]
+link Classes to ClientClasses--><g id="link_Classes_ClientClasses"><path codeLine="34" d="M202.55,277.02 C191.69,296.83 179.69,318.72 169.71,336.91 " fill="none" id="Classes-ClientClasses" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="174.1752" y="297.286">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="148.401" y="326.0566">0..*</text></g><!--MD5=[bc0d80bc09d7a90d7c8a9c5b9bb559f3]
+link Coach to Classes--><g id="link_Coach_Classes"><path codeLine="35" d="M233,104.08 C233,122.78 233,144.38 233,163.8 " fill="none" id="Coach-Classes" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="208.3828" y="124.0502">0..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="224.5125" y="153.0392">1</text></g><!--MD5=[ac07aa0eee0358d3c3959444f37b8cc5]
+@startuml
+!define RECTANGLE class
+
+'определение сущности Client'
+RECTANGLE Client {
+  + Client ID: id
+  + Name: string
+  + Email: string
+}
+
+'определение сущности Coach'
+RECTANGLE Coach {
+  + Couch ID: id
+  + Name: string
+  + Specialization: string
+}
+
+'определение сущности Classes, связь 1:N'
+'у тренера может быть несколько занятий, у занятия не может быть несколько тренеров'
+RECTANGLE Classes {
+  + Class ID: id
+  + Coach ID: id
+  + Description: string
+  + Date: string
+}
+
+'определение сущности ClientClasses, связь N:N'
+'у клиента может быть несколько занятий, и на занятии может присутствовать несколько клиентов'
+RECTANGLE ClientClasses {
+  + Class ID: id
+  + Client ID: id
+}
+
+Client "0..*" - - "0..*" ClientClasses
+Classes "0..*" - - "0..*" ClientClasses
+Coach "0..*" - - "1" Classes
+@enduml
+
+@startuml
+
+class Client {
+  + Client ID: id
+  + Name: string
+  + Email: string
+}
+
+class Coach {
+  + Couch ID: id
+  + Name: string
+  + Specialization: string
+}
+
+class Classes {
+  + Class ID: id
+  + Coach ID: id
+  + Description: string
+  + Date: string
+}
+
+class ClientClasses {
+  + Class ID: id
+  + Client ID: id
+}
+
+Client "0..*" - - "0..*" ClientClasses
+Classes "0..*" - - "0..*" ClientClasses
+Coach "0..*" - - "1" Classes
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 17:01:30 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
