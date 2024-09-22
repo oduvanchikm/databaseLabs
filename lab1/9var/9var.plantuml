@@ -24,6 +24,6 @@ RECTANGLE Booking {
   + Session ID: id
 }
 
-Film " " -- " " Session
-Session " " -- " " Booking
+Film "0..*" -- "1" Session
+Session "1" -- "1" Booking
 @enduml
