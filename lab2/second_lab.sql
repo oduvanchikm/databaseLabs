@@ -111,3 +111,28 @@ insert into Orders (OrderID, ClientID, OrderDate, TotalAmount) values
 (3, 3, '2023-11-03', 3200.75),
 (4, 4, '2023-11-04', 4750.00),
 (5, 2, '2023-11-05', 520.20);
+
+-- добавлено 5 позиций в таблицу OrderProducts
+insert into OrderProducts (OrderProductsID, OrderID, ProductID, Quantity) 
+values 
+(1, 1, 2, 2),
+(2, 2, 3, 1),
+(3, 3, 1, 5),
+(4, 4, 4, 3),
+(5, 5, 5, 4);
+
+-- добавлено 5 позиций в таблицу productsmaterial
+insert into productsmaterial (MaterialID, ProductID, Quantity) values
+(1, 2, 10),
+(2, 4, 5),
+(3, 3, 15),
+(4, 1, 20),
+(5, 5, 8);
+
+-- добавлено 5 позиций в таблицу materialsupplier
+insert into materialsupplier (materialsaplierid, supplierid, materialid, quantity, supplydate) values
+(1, 1, 3, 500, '2023-10-01'),
+(2, 2, 4, 300, '2023-10-02'),
+(3, 3, 5, 400, '2023-10-03'),
+(4, 4, 1, 250, '2023-10-04'),
+(5, 5, 2, 350, '2023-10-05');
