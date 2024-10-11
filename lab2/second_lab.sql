@@ -1,29 +1,3 @@
-
--- -- добавлено 5 позиций в таблицу OrderProducts
--- insert into OrderProducts (OrderProductsID, OrderID, ProductID, Quantity) 
--- values 
--- (1, 1, 2, 2),
--- (2, 2, 3, 1),
--- (3, 3, 1, 5),
--- (4, 4, 4, 3),
--- (5, 5, 5, 4);
-
--- -- добавлено 5 позиций в таблицу productsmaterial
--- insert into productsmaterial (MaterialID, ProductID, Quantity) values
--- (1, 2, 10),
--- (2, 4, 5),
--- (3, 3, 15),
--- (4, 1, 20),
--- (5, 5, 8);
-
--- -- добавлено 5 позиций в таблицу materialsupplier
--- insert into materialsupplier (materialsaplierid, supplierid, materialid, quantity, supplydate) values
--- (1, 1, 3, 500, '2023-10-01'),
--- (2, 2, 4, 300, '2023-10-02'),
--- (3, 3, 5, 400, '2023-10-03'),
--- (4, 4, 1, 250, '2023-10-04'),
--- (5, 5, 2, 350, '2023-10-05');
-
 create table Products (
 	ProductId int primary key,
 	Model text,
@@ -65,7 +39,7 @@ create table Supplies (
 	SupplierID int,
 	MaterialID int, 
 	Quantity int, 
-	Cost money,
+	SupplyCost money,
 	SupplyDate date,
 	primary key (SupplierID, MaterialID),
 	foreign key (SupplierID) references Suppliers(SupplierID),
@@ -108,3 +82,24 @@ insert into Material (MaterialID, MaterialName) values
 (3, 'Copper'),
 (4, 'Wood'),
 (5, 'Plastic');
+
+insert into ProductsOrders (OrderID, ProductID, Quantity) values
+(1, 2, 30),
+(2, 1, 40),
+(3, 4, 30),
+(5, 3, 40),
+(4, 5, 40);
+
+insert into ProductMaterials (ProductID, MaterialID, Quantity) values
+(1, 2, 60),
+(2, 1, 40),
+(3, 4, 70),
+(5, 3, 90),
+(4, 5, 40);
+
+insert into Supplies (SupplierID, MaterialID, Quantity, SupplyCost, SupplyDate) values
+(1, 2, 60, 99.99, '2024-10-11'),
+(2, 1, 40, 105.00, '2024-10-10'),
+(3, 5, 70, 123.00, '2024-10-13'),
+(5, 3, 90, 235.00, '2024-10-11'),
+(4, 4, 40, 89.00, '2024-10-11');
