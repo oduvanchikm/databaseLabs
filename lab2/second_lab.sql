@@ -111,7 +111,7 @@ insert into Material (MaterialID, MaterialName) values
 insert into ProductsOrders (OrderID, ProductID, Quantity) values
 (1, 2, 30),
 (2, 1, 40),
-(3, 4, 30),
+(3, 4, 30)
 (5, 3, 40),
 (4, 5, 40);
 
@@ -128,6 +128,14 @@ insert into Supplies (SupplierID, MaterialID, Quantity, SupplyCost, SupplyDate) 
 (3, 5, 70, 123.00, '2024-10-13'),
 (5, 3, 90, 235.00, '2024-10-11'),
 (4, 4, 40, 89.00, '2024-10-11');
+(6, 2, 60, 99.99, '2024-10-11'),
+(7, 2, 40, 105.00, '2024-10-10'),
+(8, 3, 70, 123.00, '2024-10-13'),
+(9, 3, 90, 235.00, '2024-10-11'),
+(10, 4, 40, 89.00, '2024-10-11');
+(1, 4, 60, 99.99, '2024-10-11'),
+(1, 5, 60, 99.99, '2024-10-11'),
+(1, 3, 60, 99.99, '2024-10-11');
 
 -- Выведите список всех произведённых продуктов, отсортировав их по дате производства
 select * from Products order by ProductionDate;
@@ -139,12 +147,20 @@ select * from Products where ProductionDate between '2024-10-10' and '2024-10-12
 select * from Supplies where SupplyCost::numeric between 120.00 and 240.00;
 
 -- Рассчитайте общую стоимость всех произведённых продуктов для каждого заказа и сохраните результаты
+-
 
 -- Определите, сколько товаров было произведено для каждой модели и запишите результаты
+select Model, count(*) as TotalProduced from Products
+group by Model;
 
 -- Выведите заказы, в которых было произведено больше определённого количества единиц продукции
+select OrderID from Productsorders
+group by OrderId 
+having sum(Quantity) > 39;
 
 -- Обновите информацию о ценах на материалы от одного из поставщиков
+update Supplies set SupplyCost = SupplyCost * 1.1 where SupplierID = 1;
+select * from Supplies;
 
 -- Удалите записи о заказах, которые были выполнены более года назад
 delete from ProductsOrders 
@@ -159,10 +175,21 @@ delete from Orders where OrderDate < '2023-10-11';
 select * from Suppliers where SuppliersName = 'Иванов И.И.';
 
 -- Выведите первые пять записей о производственных заказах, пропустив несколько первых записей
+select * from ProductsOrders order by OrderID limit 5 offset 5;
 
 -- Подсчитайте среднюю стоимость материалов для каждого заказа и сохраните результаты
+-
 
 -- Отсортируйте заказы по дате их выполнения
 select * from Orders order by OrderDate;
 
 -- Выведите список поставщиков, которые выполнили наибольшее количество поставок
+with SupplierCounts as (
+	select SupplierID, count(*) SupplyCount 
+	from Supplies 
+	group by SupplierID
+) select SupplierID, SupplyCount 
+	from SupplierCounts where SupplyCount = (
+	select max(SupplyCount) 
+	from SupplierCounts
+);
