@@ -2,74 +2,58 @@
 !define RECTANGLE class
 
 RECTANGLE Products {
-  + ProductID
+  + ProductID (PK)
   + Model
   + Color
   + Size
-  + Price
-  + Stock
+  + ProduxtionDate
+  + Cost
 }
 
-RECTANGLE Client {
-  + ClientID
+RECTANGLE Orders {
+  + OrderID (PK)
   + ClientName
-  + Phone
-  + Email
-  + Address
-}
-
-RECTANGLE Order {
-  + OrderID
-  + ClientID
+  + ClientPhone
   + OrderDate
-  + TotalAmount
+  + Cost
 }
 
-RECTANGLE OrderProducts {
-  + OrderProductsID
-  + OrderID
+RECTANGLE ProductsOrders {
+  + OrderID (PK)
   + ProductID
   + Quantity
-  + Price
 }
 
 RECTANGLE Material {
-  + MaterialID
+  + MaterialID (PK)
   + MaterialName
-  + Stock
 }
 
-RECTANGLE ProductsMaterial {
-  + ProductsMaterialID
-  + MaterialID
+RECTANGLE ProductsMaterials {
+  + ProductID (PK)
+  + MaterialID (PK)
   + ProductID
   + Quantity
 }
 
-RECTANGLE Supplier {
-  + SupplierID
-  + SupplierName
-  + Phone
-  + Email
-  + Address
+RECTANGLE Suppliers {
+  + SuppliersID (PK)
+  + SuppliersName
+  + ContactInfo
 }
 
-RECTANGLE MaterialSupplier {
-  + MaterialSupplierID
-  + SupplierID
-  + MaterialID
-  + Quantity
+RECTANGLE Supplies {
+  + SuppliersID (PK)
+  + MaterialID (PK)
+  + Cost
   + SupplyDate
 }
 
-Client " " --> " " Order
-Order " " --> " " OrderProducts
-Products " " --> " " OrderProducts
-Material " " --> " " ProductsMaterial
-Products " " --> " " ProductsMaterial
-Supplier " " --> " " MaterialSupplier
-Material " " --> " " MaterialSupplier
-
-@Material " " --> " " MaterialSupplier
+Orders " " --> " " ProductsOrders
+Products " " --> " " ProductsOrders
+Material " " --> " " ProductsMaterials
+Products " " --> " " ProductsMaterials
+Suppliers " " --> " " Supplies
+Material " " --> " " Supplies
 
 @enduml
