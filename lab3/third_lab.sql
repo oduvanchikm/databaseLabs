@@ -240,3 +240,47 @@ insert into Visits (VisitID, GalleryID, VisitorID, VisitDate) values
 (28, 14, 3, '2023-10-28 10:45:00'),
 (29, 14, 9, '2023-10-29 13:15:00'),
 (30, 15, 4, '2023-10-30 12:00:00');
+
+--Вывести временные интервалы, когда каждая галерея наиболее загружена посетителями.
+
+
+--Вывести количество произведений каждого художника, представленных в каждой галерее. (Галерея важнее художника)
+
+
+--Вывести средний возраст посетителей каждой галереи за каждый месяц текущего года.
+
+
+--Вывести количество уникальных посетителей каждой галереи за последние 6 месяцев.
+
+-- с join
+
+select 
+	Galleries.Name, 
+	count(distinct Visits.VisitorID) 
+from 
+	Galleries
+join 
+	Visits on Galleries.GalleryID = Visits.GalleryID
+where 
+	Visits.VisitDate >= '2023-10-20 10:30:00.000'
+group by 
+	Galleries.GalleryID, Galleries.Name
+order by 
+	Galleries.Name;
+
+-- с подзапросами
+-- todo выводятся все, убрать где есть ноль
+select 
+    Galleries.Name,
+    (select 
+        count(distinct Visits.VisitorID) 
+     from 
+        Visits 
+     where 
+        Galleries.GalleryID = Visits.GalleryID and Visits.VisitDate >= '2023-10-20 10:30:00.000') as UniqueVisitors
+from 
+    Galleries
+group by 
+	Galleries.GalleryID, Galleries.Name
+order by 
+	Galleries.Name;
