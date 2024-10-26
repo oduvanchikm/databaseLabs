@@ -250,19 +250,19 @@ insert into Visits (VisitID, GalleryID, VisitorID, VisitDate) values
 --Вывести средний возраст посетителей каждой галереи за каждый месяц текущего года.
 
 select 
-    Galleries.name,
-    extract(month from Visits.visitdate),
-    AVG(Visitors.visitorage)
+    Galleries.Name,
+    extract(month from Visits.VisitDate),
+    AVG(Visitors.VisitorAge)
 from 
     Galleries
 join 
-    Visits on Galleries.galleryid = Visits.galleryid
+    Visits on Galleries.GalleryID = Visits.GalleryID
 join 
-    Visitors on Visits.visitorid = Visitors.visitorid
+    Visitors on Visits.VisitorID = Visitors.VisitorID
 group by 
-    Galleries.galleryid, Galleries.name, extract(month from Visits.visitdate)
+    Galleries.GalleryID, Galleries.Name, extract(month from Visits.VisitDate)
 order by 
-    Galleries.name, extract(month from Visits.visitdate);
+    Galleries.Name, extract(month from Visits.VisitDate);
 
 --Вывести количество уникальных посетителей каждой галереи за последние 6 месяцев.
 
