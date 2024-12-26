@@ -330,9 +330,26 @@ from visits;
 
 -- с join
 
+select public.Galleries.name,
+       extract(hour from public.Visits.visitdate),
+       count(public.Visits.visitorid)
+from
+    public.Galleries
+join
+    public.Visits on public.Galleries.galleryid = public.Visits.galleryid
+group by public.Galleries.name, extract(hour from public.Visits.visitdate)
+order by count(public.Visits.visitorid) desc;
 
 -- с подзапросами
 
+select public.Galleries.name,
+       extract(hour from public.Visits.visitdate),
+       count(public.Visits.visitorid)
+from public.Galleries,
+     public.Visits
+where public.Galleries.galleryid = public.Visits.galleryid
+group by public.Galleries.name, extract(hour from public.Visits.visitdate)
+order by count(public.Visits.visitorid) desc;
 
 --Вывести количество произведений каждого художника, представленных в каждой галерее.
 
