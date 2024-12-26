@@ -45,7 +45,7 @@ create table timeSlots
 
 create table appointments
 (
-    appointmentId int primary key,
+    appointmentId serial primary key,
     clientId      int,
     serviceId     int,
     slotId        int,
@@ -198,8 +198,51 @@ values ('Oil Filter', 15.00, 100),
 select *
 from logs;
 
-insert into appointments (appointmentId, clientId, serviceId, slotId, partId)
-values (1, 4, 1, 6, 2);
+insert into appointments (clientId, serviceId, slotId, partId)
+values (4, 1, 6, 2);
 
 select *
 from parts;
+
+select *
+from appointments;
+
+--Функция записи на обслуживание — проверяет доступное время и записывает клиента.
+
+create or replace function CheckTimeAndBook(pClientId int, pServiceId int, pSlotId int, pPartId int)
+    returns boolean as
+$$
+declare
+    slotAvailableOrNot int;
+begin
+    select statusId
+    into slotAvailableOrNot
+    from timeSlots
+    where slotId = pSlotId;
+
+    if slotAvailableOrNot = 1 then
+        insert into appointments(clientId, serviceId, slotId, partId)
+        values (pClientId, pServiceId, pSlotId, pPartId);
+
+        update timeSlots
+        set statusId = 2
+        where slotId = pSlotId;
+
+        return true;
+    else
+        return false;
+    end if;
+
+end;
+$$ language plpgsql;
+
+select CheckTimeAndBook(2, 1, 5, 1);
+
+select *
+from appointments;
+
+--Функция расчета стоимости ремонта — принимает список услуг и деталей,
+-- возвращает итоговую стоимость.
+
+create or replace function 
+
