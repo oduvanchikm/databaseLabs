@@ -333,10 +333,9 @@ from visits;
 select public.Galleries.name,
        extract(hour from public.Visits.visitdate),
        count(public.Visits.visitorid)
-from
-    public.Galleries
-join
-    public.Visits on public.Galleries.galleryid = public.Visits.galleryid
+from public.Galleries
+         join
+     public.Visits on public.Galleries.galleryid = public.Visits.galleryid
 group by public.Galleries.name, extract(hour from public.Visits.visitdate)
 order by count(public.Visits.visitorid) desc;
 
@@ -434,3 +433,38 @@ having (select count(distinct public.Visits.VisitorID)
         where public.Galleries.GalleryID = public.Visits.GalleryID
           and public.Visits.VisitDate >= '2023-10-20 10:30:00.000') > 0
 order by public.Galleries.Name;
+
+--Лабораторная работа 5
+
+--Рейтинг художников по количеству картин
+
+select public.Artierts.artiertid,
+       public.Artierts.artiertname,
+       count(public.ArtObjects.artobjectid),
+       rank() over (order by count(public.ArtObjects.artobjectid) desc)
+from Artierts
+         join
+     artobjects on Artierts.ArtiertID = artobjects.ArtiertID
+group by public.Artierts.artiertid, public.Artierts.artiertname;
+
+--Рейтинг галерей по количеству картин
+
+select public.galleries.galleryid,
+       public.galleries.name,
+       count(public.ArtObjects.artobjectid),
+       rank() over (order by count(public.ArtObjects.artobjectid) desc)
+from galleries
+         join
+     artobjects on galleries.GalleryID = artobjects.GalleryID
+group by public.galleries.galleryid, public.galleries.name;
+
+--Рейтинг галерей по количеству посетителей
+
+select public.galleries.galleryid,
+       public.galleries.name,
+       count(public.visits.visitid),
+       rank() over (order by count(public.visits.visitid) desc)
+from galleries
+         join
+     visits on galleries.GalleryID = visits.GalleryID
+group by public.galleries.galleryid, public.galleries.name;
