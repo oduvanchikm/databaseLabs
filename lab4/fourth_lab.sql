@@ -62,6 +62,14 @@ create table operationName
     operationName varchar(20)
 );
 
+create table parts
+(
+    partId          serial primary key,
+    partName        text not null,
+    price           money,
+    quantityInStock int
+);
+
 create table logs
 (
     logId       serial primary key,
@@ -100,14 +108,6 @@ create trigger orderChangeTrigger
     on orders
     for each row
 execute function logOrderChangeTriggerFunction();
-
-create table parts
-(
-    partId          serial primary key,
-    partName        text not null,
-    price           money,
-    quantityInStock int
-);
 
 create or replace function logUpdateResultPart()
     returns trigger as
@@ -241,8 +241,107 @@ select CheckTimeAndBook(2, 1, 5, 1);
 select *
 from appointments;
 
---Функция расчета стоимости ремонта — принимает список услуг и деталей,
--- возвращает итоговую стоимость.
+--Функция расчета стоимости ремонта — принимает список услуг и деталей, возвращает итоговую стоимость.
 
-create or replace function 
+create or replace function CalculateRepairCost(serviceArray int[], partArray int[])
+    returns money as
+$$
+declare
+    totalCost   money := 0;
+    serviceCost money;
+    partCost    money;
 
+begin
+    select sum(price)
+    into serviceCost
+    from services
+    where serviceId = any (serviceArray);
+
+    select sum(price)
+    into partCost
+    from parts
+    where partId = any (partArray);
+
+    totalCost := serviceCost + partCost;
+
+    return totalCost;
+
+end;
+$$ language plpgsql;
+
+select CalculateRepairCost(array [1, 2], array [3, 4, 5]);
+
+--Создать представление, которое будет содержать топ-10 заказываемых услуг
+
+create view popularServices as
+select services.serviceId,
+       services.serviceName,
+       count(appointments.appointmentId)
+from services
+         join
+     appointments on services.serviceId = appointments.serviceId
+group by services.serviceId, services.serviceName
+order by count(appointments.appointmentId) desc
+limit 10;
+
+select *
+from popularServices;
+
+--Создать представления для администратора
+
+create view adminView as
+select clients.clientId,
+       clients.name,
+       clients.contactInfo,
+       services.serviceName,
+       orders.orderDate,
+       statusesForOrder.statusName,
+       timeSlots.startTime,
+       timeSlots.endTime
+from clients
+         join
+     appointments on clients.clientId = appointments.clientId
+         join
+     orders on clients.clientId = orders.clientId
+         join
+     statusesForOrder on orders.statusId = statusesForOrder.statusId
+         join
+     services on appointments.serviceId = services.serviceId
+         join
+     timeSlots on appointments.slotId = timeSlots.slotId;
+
+select *
+from adminView;
+
+--Создать представления для покупателя
+
+create view customerView as
+select clients.name,
+       services.serviceName,
+       orders.orderDate,
+       statusesForOrder.statusName
+from clients
+         join
+     orders on clients.clientId = orders.clientId
+         join
+     statusesForOrder on statusesForOrder.statusId = orders.statusId
+         join
+     appointments on clients.clientId = appointments.clientId
+         join
+     services on appointments.serviceId = services.serviceId;
+
+select *
+from customerView;
+
+--Создать представления для продавца
+
+create view sellerView as
+select services.serviceName,
+       count(appointments.appointmentId),
+       sum(services.price)
+from services
+         join
+     appointments on services.serviceId = appointments.serviceId
+group by services.serviceId, services.serviceName;
+
+select * from sellerView;
