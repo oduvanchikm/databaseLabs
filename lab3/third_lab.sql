@@ -437,22 +437,43 @@ order by public.Galleries.Name;
 --Лабораторная работа 5
 
 --Рейтинг художников по количеству картин
+--если count оконка тоже
 
-select public.Artierts.artiertid,
-       public.Artierts.artiertname,
-       count(public.ArtObjects.artobjectid),
-       rank() over (order by count(public.ArtObjects.artobjectid) desc)
-from Artierts
-         join
-     artobjects on Artierts.ArtiertID = artobjects.ArtiertID
-group by public.Artierts.artiertid, public.Artierts.artiertname;
+with artistArtCount as (
+    select artierts.artiertID,
+           artierts.artiertname,
+           count(artobjects.artobjectid) over (partition by artierts.artiertid) as countArt
+    from
+        artierts
+    join
+        artobjects on artierts.ArtiertID = artobjects.ArtiertID
+)
+
+select artistArtCount.artiertID,
+       artistArtCount.artiertname,
+       artistArtCount.countArt,
+       dense_rank() over (order by artistArtCount.countArt desc) as rankArt
+from
+    artistArtCount
+order by
+    rankArt;
+
+-- select public.Artierts.artiertid,
+--        public.Artierts.artiertname,
+--        count(public.ArtObjects.artobjectid),
+--        dense_rank() over (order by count(public.ArtObjects.artobjectid) desc)
+-- from public.Artierts
+--          join
+--      public.artobjects on public.Artierts.ArtiertID = public.artobjects.ArtiertID
+-- group by public.Artierts.artiertid, public.Artierts.artiertname;
 
 --Рейтинг галерей по количеству картин
+--аналогично остальные count оконка
 
 select public.galleries.galleryid,
        public.galleries.name,
        count(public.ArtObjects.artobjectid),
-       rank() over (order by count(public.ArtObjects.artobjectid) desc)
+       dense_rank() over (order by count(public.ArtObjects.artobjectid) desc)
 from galleries
          join
      artobjects on galleries.GalleryID = artobjects.GalleryID
